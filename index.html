@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安盛企業內部 AI 知識助理專案訪談問卷</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #ffffff;
+        }
+        .title-blue {
+            color: #003366; /* 深藍色 */
+        }
+        .form-input {
+            border: none;
+            border-bottom: 1px solid #6b7280;
+            outline: none;
+            padding: 2px 4px;
+            background-color: transparent;
+            transition: border-color 0.3s;
+        }
+        .form-input:focus {
+            border-bottom: 2px solid #3b82f6;
+        }
+        .form-section {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        h2 {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 700; /* font-bold */
+            color: #003366; /* title-blue */
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            cursor: pointer;
+        }
+        input[type="checkbox"] {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.75rem;
+            accent-color: #003366;
+        }
+        .other-input-container {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <div class="container mx-auto max-w-4xl p-4 sm:p-8">
+        <!-- Logo -->
+        <header class="mb-8">
+            <img src="https://anselm.com.tw/wp-content/uploads/2023/08/logo-02.png" alt="Anselm Logo" class="w-40 sm:w-48">
+        </header>
+
+        <!-- 表單開始 -->
+        <form id="questionnaireForm" action="mailto:linda@anselm.com.tw,sales@anselm.com.tw" method="post" enctype="text/plain">
+            
+            <h1 class="text-2xl sm:text-3xl font-bold title-blue text-center mb-10">
+                安盛企業內部 AI 知識助理專案訪談問卷
+            </h1>
+
+            <!-- 聯絡資訊 -->
+            <div class="form-section">
+                <h2>聯絡資訊</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="companyName" class="font-bold">公司名稱:</label>
+                        <input type="text" id="companyName" name="公司名稱" class="form-input w-full mt-1">
+                    </div>
+                    <div>
+                        <label for="contactPerson" class="font-bold">聯絡人:</label>
+                        <input type="text" id="contactPerson" name="聯絡人" class="form-input w-full mt-1">
+                    </div>
+                    <div>
+                        <label for="contactEmail" class="font-bold">Email:</label>
+                        <input type="email" id="contactEmail" name="Email" class="form-input w-full mt-1">
+                    </div>
+                    <div>
+                        <label for="contactPhone" class="font-bold">聯絡電話:</label>
+                        <input type="tel" id="contactPhone" name="聯絡電話" class="form-input w-full mt-1">
+                    </div>
+                </div>
+                 <input type="hidden" name=" " value="----------------------------------------">
+            </div>
+
+            <!-- 1. PLM 系統現況調查 -->
+            <div class="form-section">
+                <h2>1. PLM 系統現況調查</h2>
+                <p class="font-bold mb-3">貴公司目前使用的 PLM 系統：</p>
+                <div>
+                    <label class="checkbox-label"><input type="checkbox" name="PLM系統" value="Oracle Agile PLM"> Oracle Agile PLM</label>
+                    <label class="checkbox-label"><input type="checkbox" name="PLM系統" value="Aras Open PLM"> Aras Open PLM</label>
+                    <label class="checkbox-label"><input type="checkbox" name="PLM系統" value="西門子 Teamcenter"> 西門子 Teamcenter</label>
+                    <div class="other-input-container checkbox-label">
+                        <input type="checkbox" name="PLM系統" value="其他"> 
+                        <span>其他系統：</span>
+                        <input type="text" name="PLM系統_其他" class="form-input flex-grow ml-2">
+                    </div>
+                    <label class="checkbox-label"><input type="checkbox" name="PLM系統" value="尚未導入"> 尚未導入 PLM 系統</label>
+                </div>
+                <div class="mt-4">
+                    <p class="font-bold">系統版本及使用年限：</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                        <div>
+                            <label for="sysVersion">系統版本：</label>
+                            <input type="text" id="sysVersion" name="系統版本" class="form-input w-full">
+                        </div>
+                        <div>
+                            <label for="usageYears">使用年限：</label>
+                            <input type="text" id="usageYears" name="使用年限" class="form-input w-full">
+                        </div>
+                        <div>
+                            <label for="userCount">使用者數量：</label>
+                            <input type="text" id="userCount" name="使用者數量" class="form-input w-full">
+                        </div>
+                    </div>
+                </div>
+                 <input type="hidden" name=" " value="----------------------------------------">
+            </div>
+
+            <!-- 2. 需求與功能期望 -->
+            <div class="form-section">
+                <h2>2. 需求與功能期望</h2>
+                <p class="font-bold mb-3">您希望 AI 知識助理提供哪些主要功能？</p>
+                <div>
+                    <label class="checkbox-label"><input type="checkbox" name="主要功能" value="自動化資料提取與格式轉換"> 自動化資料提取與格式轉換</label>
+                    <label class="checkbox-label"><input type="checkbox" name="主要功能" value="資料分類與標記功能"> 資料分類與標記功能</label>
+                    <label class="checkbox-label"><input type="checkbox" name="主要功能" value="智能問答服務 (FAQ)"> 智能問答服務 (FAQ)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="主要功能" value="文件檢索與知識查詢"> 文件檢索與知識查詢</label>
+                    <label class="checkbox-label"><input type="checkbox" name="主要功能" value="工程變更追蹤與分析"> 工程變更追蹤與分析</label>
+                    <label class="checkbox-label"><input type="checkbox" name="主要功能" value="產品生命週期數據分析"> 產品生命週期數據分析</label>
+                    <label class="checkbox-label"><input type="checkbox" name="主要功能" value="嵌入模型適配性測試"> 嵌入模型適配性測試</label>
+                    <label class="checkbox-label"><input type="checkbox" name="主要功能" value="提示詞工程驗證"> 提示詞工程驗證</label>
+                    <label class="checkbox-label"><input type="checkbox" name="主要功能" value="推論模型適配性與知識庫品質驗證"> 推論模型適配性與知識庫品質驗證</label>
+                    <div class="other-input-container checkbox-label">
+                        <input type="checkbox" name="主要功能" value="其他"> 
+                        <span>其他：</span>
+                        <input type="text" name="主要功能_其他" class="form-input flex-grow ml-2">
+                    </div>
+                </div>
+
+                <p class="font-bold mb-3 mt-6">預期主要應用場景：</p>
+                <div>
+                    <label class="checkbox-label"><input type="checkbox" name="應用場景" value="零件選型智慧助理"> 零件選型智慧助理</label>
+                    <label class="checkbox-label"><input type="checkbox" name="應用場景" value="BOM差異分析&結構助理"> BOM差異分析&結構助理</label>
+                    <label class="checkbox-label"><input type="checkbox" name="應用場景" value="設計變更影響分析助理"> 設計變更影響分析助理</label>
+                    <label class="checkbox-label"><input type="checkbox" name="應用場景" value="文件搜尋與摘要助理"> 文件搜尋與摘要助理</label>
+                    <label class="checkbox-label"><input type="checkbox" name="應用場景" value="專案任務&知識助理"> 專案任務&知識助理</label>
+                    <label class="checkbox-label"><input type="checkbox" name="應用場景" value="失效模式與測試記錄助理"> 失效模式與測試記錄助理</label>
+                    <label class="checkbox-label"><input type="checkbox" name="應用場景" value="研發資料快速檢索"> 研發資料快速檢索</label>
+                    <label class="checkbox-label"><input type="checkbox" name="應用場景" value="設計規範查詢"> 設計規範查詢</label>
+                    <label class="checkbox-label"><input type="checkbox" name="應用場景" value="品質問題查詢"> 品質問題查詢</label>
+                    <label class="checkbox-label"><input type="checkbox" name="應用場景" value="供應商資訊查詢"> 供應商資訊查詢</label>
+                    <div class="other-input-container checkbox-label">
+                         <input type="checkbox" name="應用場景" value="其他">
+                         <span>其他：</span>
+                        <input type="text" name="應用場景_其他" class="form-input flex-grow ml-2">
+                    </div>
+                </div>
+
+                <p class="font-bold mb-3 mt-6">測試資料類型及格式需求：</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-x-4">
+                    <label class="checkbox-label"><input type="checkbox" name="資料類型" value="Part (零件資料)"> Part (零件資料)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="資料類型" value="BOM (物料清單)"> BOM (物料清單)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="資料類型" value="Document (文件)"> Document (文件)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="資料類型" value="Change Order (變更單)"> Change Order (變更單)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="資料類型" value="Project (專案資料)"> Project (專案資料)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="資料類型" value="IChange Item (變更項目)"> Change Item (變更項目)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="資料類型" value="IStatus (狀態資料)"> Status (狀態資料)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="資料類型" value="IManufacturerPart (製造商零件)"> ManufacturerPart (製造商零件)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="資料類型" value="ISupplier (供應商)"> Supplier (供應商)</label>
+                    <div class="other-input-container checkbox-label col-span-full">
+                        <input type="checkbox" name="資料類型" value="其他">
+                        <span>其他：</span>
+                        <input type="text" name="資料類型_其他" class="form-input flex-grow ml-2">
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <label for="dataVol">預計提供測試的資料量級 (例如: 1000 筆零件, 500 份文件)：</label>
+                    <input type="text" id="dataVol" name="測試資料量級" class="form-input w-full mt-1">
+                </div>
+                 <input type="hidden" name=" " value="----------------------------------------">
+            </div>
+            
+            <!-- 3. 技術與架構需求 -->
+            <div class="form-section">
+                <h2>3. 技術與架構需求</h2>
+                <p class="font-bold mb-3">期望部署方式：</p>
+                <div>
+                    <label class="checkbox-label"><input type="checkbox" name="部署方式" value="雲端部署 (SaaS)"> 雲端部署 (SaaS)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="部署方式" value="本地部署 (On-Premise)"> 本地部署 (On-Premise)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="部署方式" value="混合雲"> 混合雲</label>
+                </div>
+
+                <p class="font-bold mb-3 mt-6">雲端服務商偏好：</p>
+                <div>
+                    <label class="checkbox-label"><input type="checkbox" name="雲端服務商" value="Microsoft Azure"> Microsoft Azure</label>
+                    <label class="checkbox-label"><input type="checkbox" name="雲端服務商" value="Amazon Web Services (AWS)"> Amazon Web Services (AWS)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="雲端服務商" value="Google Cloud Platform (GCP)"> Google Cloud Platform (GCP)</label>
+                    <div class="other-input-container checkbox-label">
+                         <input type="checkbox" name="雲端服務商" value="其他">
+                         <span>其他：</span>
+                        <input type="text" name="雲端服務商_其他" class="form-input flex-grow ml-2">
+                    </div>
+                </div>
+
+                <p class="font-bold mb-3 mt-6">大語言模型 (LLM) 偏好：</p>
+                <div>
+                    <label class="checkbox-label"><input type="checkbox" name="LLM偏好" value="OpenAI GPT 系列"> OpenAI GPT 系列</label>
+                    <label class="checkbox-label"><input type="checkbox" name="LLM偏好" value="Google Gemini 系列"> Google Gemini 系列</label>
+                    <label class="checkbox-label"><input type="checkbox" name="LLM偏好" value="Anthropic Claude 系列"> Anthropic Claude 系列</label>
+                    <label class="checkbox-label"><input type="checkbox" name="LLM偏好" value="本地開源模型 (如 Llama, Mistral)"> 本地開源模型 (如 Llama, Mistral)</label>
+                    <div class="other-input-container checkbox-label">
+                         <input type="checkbox" name="LLM偏好" value="其他">
+                         <span>其他：</span>
+                        <input type="text" name="LLM偏好_其他" class="form-input flex-grow ml-2">
+                    </div>
+                </div>
+                 <input type="hidden" name=" " value="----------------------------------------">
+            </div>
+            
+            <!-- 4. 預算與硬體需求 -->
+            <div class="form-section">
+                <h2>4. 預算與硬體需求</h2>
+                <div class="mt-4">
+                    <label for="budget">專案預算範圍 (TWD)：</label>
+                    <input type="text" id="budget" name="專案預算範圍" class="form-input w-full mt-1">
+                </div>
+
+                <p class="font-bold mb-3 mt-6">本地部署需求：</p>
+                <div>
+                    <label class="checkbox-label"><input type="checkbox" name="本地部署需求" value="Embedding Model 本地部署"> Embedding Model 本地部署</label>
+                    <label class="checkbox-label"><input type="checkbox" name="本地部署需求" value="LLM Model 本地部署"> LLM Model 本地部署</label>
+                    <label class="checkbox-label"><input type="checkbox" name="本地部署需求" value="完整 RAG 架構本地化"> 完整 RAG 架構本地化</label>
+                </div>
+
+                <p class="font-bold mb-3 mt-6">是否需要硬體報價服務：</p>
+                <div>
+                    <label class="checkbox-label"><input type="checkbox" name="硬體報價" value="是，需要完整硬體配置建議"> 是，需要完整硬體配置建議</label>
+                    <label class="checkbox-label"><input type="checkbox" name="硬體報價" value="是，僅需 GPU 配置建議"> 是，僅需 GPU 配置建議</label>
+                    <label class="checkbox-label"><input type="checkbox" name="硬體報價" value="否，現有環境足夠"> 否，現有環境足夠</label>
+                    <label class="checkbox-label"><input type="checkbox" name="硬體報價" value="不確定，需要評估"> 不確定，需要評估</label>
+                </div>
+                 <input type="hidden" name=" " value="----------------------------------------">
+            </div>
+
+            <!-- 5. 提示詞工程需求 -->
+            <div class="form-section">
+                <h2>5. 提示詞工程需求</h2>
+                <p class="font-bold mb-3">提示詞工程期望：</p>
+                <div>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞工程期望" value="自訂提示詞管理介面"> 自訂提示詞管理介面</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞工程期望" value="多場景提示詞模板"> 多場景提示詞模板</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞工程期望" value="提示詞効果測試與優化"> 提示詞効果測試與優化</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞工程期望" value="自動化提示詞調整"> 自動化提示詞調整</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞工程期望" value="提示詞版本控制"> 提示詞版本控制</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞工程期望" value="多模型對比提示詞優化"> 多模型對比提示詞優化</label>
+                     <div class="other-input-container checkbox-label">
+                         <input type="checkbox" name="提示詞工程期望" value="其他">
+                         <span>其他：</span>
+                        <input type="text" name="提示詞工程期望_其他" class="form-input flex-grow ml-2">
+                    </div>
+                </div>
+
+                <p class="font-bold mb-3 mt-6">預期建立的提示詞類型：</p>
+                <div>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="零件選型查詢類"> 零件選型查詢類</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="BOM分析類"> BOM分析類</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="設計變更影響分析類"> 設計變更影響分析類</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="文件摘要生成類"> 文件摘要生成類</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="專案管理類"> 專案管理類</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="失效分析類"> 失效分析類</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="技術查詢類"> 技術查詢類</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="流程指引類"> 流程指引類</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="問題排除類"> 問題排除類</label>
+                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="數據分析類"> 數據分析類</label>
+                    <div class="other-input-container checkbox-label">
+                         <input type="checkbox" name="提示詞類型" value="其他">
+                         <span>其他：</span>
+                        <input type="text" name="提示詞類型_其他" class="form-input flex-grow ml-2">
+                    </div>
+                </div>
+                 <input type="hidden" name=" " value="----------------------------------------">
+            </div>
+
+            <!-- 6. 教育訓練需求 -->
+            <div class="form-section">
+                <h2>6. 教育訓練需求</h2>
+                <p class="font-bold mb-3">A. 基礎架構課程</p>
+                <div>
+                    <label class="checkbox-label"><input type="checkbox" name="教育訓練_基礎" value="LLM 基礎概念"> LLM 基礎概念 (大語言模型原理與應用場景)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="教育訓練_基礎" value="RAG 架構解析"> RAG 架構解析 (檢索增強生成技術實務)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="教育訓練_基礎" value="Docker 容器化部署"> Docker 容器化部署 (安裝與環境建置實戰)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="教育訓練_基礎" value="Ollama 本地模型管理"> Ollama 本地模型管理 (下載 / 部署 / 應用)</label>
+                </div>
+                <p class="font-bold mb-3 mt-6">B. 核心操作課程</p>
+                <div>
+                     <label class="checkbox-label"><input type="checkbox" name="教育訓練_核心" value="AnythingLLM 系統安裝與初始化"> AnythingLLM 系統安裝與初始化</label>
+                     <label class="checkbox-label"><input type="checkbox" name="教育訓練_核心" value="Workspace 管理與文件操作"> Workspace 管理與文件操作 (上傳 / 分割 / 權限設定)</label>
+                     <label class="checkbox-label"><input type="checkbox" name="教育訓練_核心" value="向量資料庫整合"> 向量資料庫整合 (Qdrant 配置與優化)</label>
+                     <label class="checkbox-label"><input type="checkbox" name="教育訓練_核心" value="嵌入模型設定"> 嵌入模型設定 (Ollama/OpenAI 模型實戰)</label>
+                </div>
+                <p class="font-bold mb-3 mt-6">C. 進階應用課程</p>
+                <div>
+                     <label class="checkbox-label"><input type="checkbox" name="教育訓練_進階" value="AI Agent 功能開發"> AI Agent 功能開發 (文件摘要 / 網站爬蟲 / 流程自動化)</label>
+                     <label class="checkbox-label"><input type="checkbox" name="教育訓練_進階" value="多模態模型應用"> 多模態模型應用 (圖片辨識 / 圖表分析)</label>
+                     <label class="checkbox-label"><input type="checkbox" name="教育訓練_進階" value="提示詞工程實戰"> 提示詞工程實戰 (設計 / 優化 / 管理)</label>
+                     <label class="checkbox-label"><input type="checkbox" name="教育訓練_進階" value="Fine-tuning 模型微調"> Fine-tuning 模型微調 (客製化模型訓練)</label>
+                </div>
+            </div>
+            
+            <!-- 提交按鈕 -->
+            <div class="text-center mt-10">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300">
+                    提交問卷
+                </button>
+            </div>
+        </form>
+        <!-- 表單結束 -->
+
+    </div>
+
+</body>
+</html>
