@@ -72,7 +72,7 @@
         </header>
 
         <!-- 表單開始 -->
-        <form id="questionnaireForm" action="mailto:linda@anselm.com.tw,sales@anselm.com.tw" method="post" enctype="text/plain">
+        <form id="questionnaireForm" action="mailto:linda@anselm.com.tw" method="post" enctype="text/plain">
             
             <h1 class="text-2xl sm:text-3xl font-bold title-blue text-center mb-10">
                 安盛企業內部 AI 知識助理專案訪談問卷
@@ -202,14 +202,9 @@
                  <input type="hidden" name=" " value="----------------------------------------">
             </div>
             
-            <!-- 3. 預算與硬體需求 -->
+            <!-- 3. 硬體需求 -->
             <div class="form-section">
-                <h2>3. 預算與硬體需求</h2>
-                <div class="mt-4">
-                    <label for="budget">專案預算範圍 (TWD)：</label>
-                    <input type="text" id="budget" name="專案預算範圍" class="form-input w-full mt-1">
-                </div>
-
+                <h2>3. 硬體需求</h2>
                 <p class="font-bold mb-3 mt-6">本地部署需求：</p>
                 <div>
                     <label class="checkbox-label"><input type="checkbox" name="本地部署需求" value="Embedding Model 本地部署"> Embedding Model 本地部署</label>
@@ -235,32 +230,10 @@
                     <label class="checkbox-label"><input type="checkbox" name="提示詞工程期望" value="自訂提示詞管理介面"> 自訂提示詞管理介面</label>
                     <label class="checkbox-label"><input type="checkbox" name="提示詞工程期望" value="多場景提示詞模板"> 多場景提示詞模板</label>
                     <label class="checkbox-label"><input type="checkbox" name="提示詞工程期望" value="提示詞効果測試與優化"> 提示詞効果測試與優化</label>
-                    <label class="checkbox-label"><input type="checkbox" name="提示詞工程期望" value="自動化提示詞調整"> 自動化提示詞調整</label>
-                    <label class="checkbox-label"><input type="checkbox" name="提示詞工程期望" value="提示詞版本控制"> 提示詞版本控制</label>
-                    <label class="checkbox-label"><input type="checkbox" name="提示詞工程期望" value="多模型對比提示詞優化"> 多模型對比提示詞優化</label>
                      <div class="other-input-container checkbox-label">
                          <input type="checkbox" name="提示詞工程期望" value="其他">
                          <span>其他：</span>
                         <input type="text" name="提示詞工程期望_其他" class="form-input flex-grow ml-2">
-                    </div>
-                </div>
-
-                <p class="font-bold mb-3 mt-6">預期建立的提示詞類型：</p>
-                <div>
-                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="零件選型查詢類"> 零件選型查詢類</label>
-                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="BOM分析類"> BOM分析類</label>
-                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="設計變更影響分析類"> 設計變更影響分析類</label>
-                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="文件摘要生成類"> 文件摘要生成類</label>
-                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="專案管理類"> 專案管理類</label>
-                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="失效分析類"> 失效分析類</label>
-                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="技術查詢類"> 技術查詢類</label>
-                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="流程指引類"> 流程指引類</label>
-                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="問題排除類"> 問題排除類</label>
-                    <label class="checkbox-label"><input type="checkbox" name="提示詞類型" value="數據分析類"> 數據分析類</label>
-                    <div class="other-input-container checkbox-label">
-                         <input type="checkbox" name="提示詞類型" value="其他">
-                         <span>其他：</span>
-                        <input type="text" name="提示詞類型_其他" class="form-input flex-grow ml-2">
                     </div>
                 </div>
                  <input type="hidden" name=" " value="----------------------------------------">
@@ -303,9 +276,6 @@
                     <label class="checkbox-label"><input type="checkbox" name="訓練對象" value="PLM 系統管理員"> PLM 系統管理員</label>
                     <label class="checkbox-label"><input type="checkbox" name="訓練對象" value="研發工程師"> 研發工程師</label>
                     <label class="checkbox-label"><input type="checkbox" name="訓練對象" value="專案經理"> 專案經理</label>
-                    <label class="checkbox-label"><input type="checkbox" name="訓練對象" value="AI 顧問"> AI 顧問</label>
-                    <label class="checkbox-label"><input type="checkbox" name="訓練對象" value="技術顧問"> 技術顧問</label>
-                    <label class="checkbox-label"><input type="checkbox" name="訓練對象" value="企業內部講師"> 企業內部講師</label>
                      <div class="other-input-container checkbox-label">
                          <input type="checkbox" name="訓練對象" value="其他">
                          <span>其他：</span>
@@ -315,10 +285,6 @@
 
                 <p class="font-bold mb-3 mt-6">教育訓練時程偏好：</p>
                 <div class="space-y-4">
-                    <div class="input-group flex items-center">
-                        <label for="totalHours" class="whitespace-nowrap">課程總時數需求：</label>
-                        <input type="text" id="totalHours" name="課程總時數需求" class="form-input w-24 mx-2"> 小時
-                    </div>
                     <div class="input-group flex items-center">
                         <label for="sessionHours" class="whitespace-nowrap">單次課程時長：</label>
                         <input type="text" id="sessionHours" name="單次課程時長" class="form-input w-24 mx-2"> 小時/次
@@ -342,24 +308,13 @@
                     <label class="checkbox-label"><input type="checkbox" name="訓練方式" value="實體課程 (現場教學)"> 實體課程 (現場教學)</label>
                     <label class="checkbox-label"><input type="checkbox" name="訓練方式" value="線上課程 (遠端教學)"> 線上課程 (遠端教學)</label>
                     <label class="checkbox-label"><input type="checkbox" name="訓練方式" value="混合式課程 (實體+線上)"> 混合式課程 (實體+線上)</label>
-                    <label class="checkbox-label"><input type="checkbox" name="訓練方式" value="實作工作坊"> 實作工作坊</label>
-                    <label class="checkbox-label"><input type="checkbox" name="訓練方式" value="一對一指導"> 一對一指導</label>
-                    <label class="checkbox-label"><input type="checkbox" name="訓練方式" value="小組討論課程"> 小組討論課程</label>
                 </div>
                 <input type="hidden" name=" " value="----------------------------------------">
             </div>
 
-            <!-- 6. 資料匯出與整合需求 -->
+            <!-- 6. 後續維運需求 -->
             <div class="form-section">
-                <h2>6. 資料匯出與整合需求</h2>
-                 <p class="font-bold mb-3">PLM 資料匯出方式偏好：</p>
-                 <div>
-                    <label class="checkbox-label"><input type="checkbox" name="匯出方式" value="SOAP API (Webservice)"> SOAP API (Webservice)</label>
-                    <label class="checkbox-label"><input type="checkbox" name="匯出方式" value="Session connect (runnable extension)"> Session connect (runnable extension)</label>
-                    <label class="checkbox-label"><input type="checkbox" name="匯出方式" value="SELECT data (database)"> SELECT data (database)</label>
-                    <label class="checkbox-label"><input type="checkbox" name="匯出方式" value="定期批次匯出"> 定期批次匯出</label>
-                    <label class="checkbox-label"><input type="checkbox" name="匯出方式" value="即時同步更新"> 即時同步更新</label>
-                 </div>
+                <h2>6. 後續維運需求</h2>
                  <p class="font-bold mb-3 mt-6">資料更新頻率：</p>
                  <div>
                     <label class="checkbox-label"><input type="checkbox" name="更新頻率" value="即時更新"> 即時更新</label>
